@@ -1,0 +1,29 @@
+npx create-next-app@latest --ts
+npm install -g truffle
+truffle init 
+
+todoListContract = await TodoList.deployed()
+name = await todoListContract.name()
+name
+
+truffle compile 
+truffle migrate --reset
+truffle console
+contract = await smContract.deployed()
+contract
+name = await contract.name()
+name
+
+
+todoListContract = await TodoList.deployed()
+
+account = await web3.eth.getCoinbase()
+account 
+Совпадение с адресом где развернут смарт контракт
+
+
+taskCount = await todoListContract.tasksCount(account)
+taskCount.toNumber()
+theTask = await todoListContract.tasks(account, 0)
+
+https://chakra-ui.com/guides/getting-started/nextjs-guide
